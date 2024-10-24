@@ -1,0 +1,237 @@
+/*** RESET ***/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ********* */
+
+body {
+  min-block-size: 100dvh;
+  min-block-size: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  font-family: var(--ff-roboto);
+  font-size: 1rem;
+  background-color: var(--clr-3);
+  color: var(--clr-4)
+}
+
+:root {
+  --ff-roboto: 'Roboto';
+  --clr-1: #793FDF;
+  --clr-2: #FFF;
+  --clr-3: #DFF2EB;
+  --clr-4: #2E073F;
+  --clr-5: #bdb4cd;
+  --clr-6: #e1afc6;
+  --clr-7: #96fdd5;
+  --clr-8: #640D5F;
+  --clr-9: #FF004D;
+  --clr-10: #059212;
+  --radius: 8px;
+}
+
+
+/*** UTILITY CLASSES ***/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  inline-size: 18.125rem;
+}
+
+.profile-pic {
+  inline-size: 3rem;
+  block-size: 3rem;
+  border-radius: 50%;
+}
+
+
+/*** HEADER ***/
+.header {
+  padding-block: 1.5em;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-1);
+}
+
+
+/*** FORM ***/
+.tweet-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em .5em;
+}
+
+
+.form-input {
+  padding: .5em;
+  border-radius: var(--radius);
+  line-height: 1.6;
+}
+
+.form-btn {
+  --radius: 2em;
+  grid-column: span 2;
+  padding-block: .6em;
+  font-weight: 500;
+  border-radius: var(--radius);
+  background-color: var(--clr-1);
+  color: var(--clr-2);
+  border: none;
+}
+
+
+/*** TWEET FEED SECTION ***/
+.tweet-feed {
+  margin-top: 1.5em;
+}
+
+.tweet {
+  padding-block: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .5em;
+  font-size: .9rem;
+  line-height: 1.5;
+  border-top: 1px solid #D4BEE4;
+}
+
+.tweet-profile-pic {
+  grid-row: span 3;
+}
+
+.tweet-handle,
+.tweet-text {
+  grid-column: 2/3;
+}
+
+.tweet-handle {
+  font-weight: 500;
+}
+
+.tweet-btns {
+  display: flex;
+  gap: 1em;
+}
+
+.tweet-btn {
+  --radius: 4px;
+  padding: .25em .5em;
+  font-weight: 500;
+  border-radius: var(--radius);
+  color: inherit;
+  cursor: pointer;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.liked {
+  color: var(--clr-9);
+}
+
+.retweeted {
+  color: var(--clr-10);
+}
+
+.tweet-reply-section {
+  margin-top: 0.5em;
+  grid-column: 2/-1;
+  font-size: .9rem;
+}
+
+.tweet-reply {
+  padding-block: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .5em;
+  border-top: 1px solid #D4BEE4;
+}
+
+.tweet-reply-pic {
+  grid-row: span 2;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*** ATTRIBUTION ***/
+.attribution {
+  margin-top: 1em;
+  padding-block: 1em;
+  font-size: .8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.attribution-cta {
+  font-weight: 700;
+}
+
+
+/* **** STATES **** */
+@media (hover:hover) {
+  .tweet-btn:hover {
+    font-weight: 700;
+  }
+
+  .tweet-btn:first-child:hover {
+    background-color: var(--clr-5);
+    color: var(--clr-8);
+  }
+
+  .tweet-btn:nth-child(2):hover {
+    background-color: var(--clr-6);
+    color: var(--clr-9);
+  }
+
+  .tweet-btn:last-child:hover {
+    background-color: var(--clr-7);
+    color: var(--clr-10);
+  }
+}
