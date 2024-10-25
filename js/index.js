@@ -127,9 +127,9 @@ function handleFormBtnClick(e) {
 
   if (tweetInput.value.trim()) {
     tweetsData.unshift(newTweet)
-    tweetInput.value = ''
     renderTweets(tweetsData)
   }
+  tweetInput.value = ''
 }
 
 // Event listener to handle button clicks

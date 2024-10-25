@@ -121,8 +121,9 @@ body {
   font-weight: 500;
   border-radius: var(--radius);
   background-color: var(--clr-1);
-  color: var(--clr-2);
   border: none;
+  color: var(--clr-2);
+  cursor: pointer;
 }
 
 
@@ -211,6 +212,9 @@ body {
 
 .attribution-cta {
   font-weight: 700;
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 
@@ -222,16 +226,13 @@ body {
 
   .tweet-btn:first-child:hover {
     background-color: var(--clr-5);
-    color: var(--clr-8);
   }
 
   .tweet-btn:nth-child(2):hover {
     background-color: var(--clr-6);
-    color: var(--clr-9);
   }
 
   .tweet-btn:last-child:hover {
     background-color: var(--clr-7);
-    color: var(--clr-10);
   }
 }
